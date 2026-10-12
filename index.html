@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="uz-Cyrl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Хатна тўйи — Муҳаммаджон | Taklifnoma</title>
+<meta name="description" content="Сизга таклифнома бор. Очиш учун босинг.">
+<meta name="theme-color" content="#0f1f3d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Хатна тўйи — Муҳаммаджон">
+<meta property="og:description" content="Сизга таклифнома бор. Очиш учун босинг.">
+<meta property="og:locale" content="uz_UZ">
+<!-- OG_IMAGE_URL: Muhammadjon surati yoki dizayn rasmi, TO'LIQ manzil bilan (https://...jpg) -->
+<meta property="og:image" content="OG_IMAGE_URL">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1f3d'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23c9a24b' font-family='Georgia,serif'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<noscript><style>.splash{display:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+
+<style>
+/* ==================== RANGLAR ==================== */
+:root{
+  --navy:#0f1f3d; --navy-2:#182d55; --navy-3:#0a1630;
+  --gold:#c9a24b; --gold-light:#e6c97a; --gold-ink:#7d5f1e;
+  --cream:#f6efe0; --cream-2:#efe3c8; --paper:#fffaf0;
+  --ink:#1d2433; --on-navy:#f8f3e6;
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Montserrat", "Noto Sans", Arial, sans-serif;
+  --frame:480px;
+  --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='%23c9a24b' stroke-opacity='.10'%3E%3Cpath d='M32 8l7 17 17 7-17 7-7 17-7-17-17-7 17-7z'/%3E%3Ccircle cx='0' cy='0' r='6'/%3E%3Ccircle cx='64' cy='0' r='6'/%3E%3Ccircle cx='0' cy='64' r='6'/%3E%3Ccircle cx='64' cy='64' r='6'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--ink);
+  background:var(--navy-3) var(--pattern);}
+body.locked{overflow:hidden}
+img{max-width:100%;display:block}
+button,input,textarea{font:inherit;color:inherit}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid var(--gold-light);outline-offset:3px}
+.cream :focus-visible{outline-color:var(--navy)}
+[tabindex="-1"]:focus{outline:none}
+
+/* telefon ramkasi */
+.app{max-width:var(--frame);margin:0 auto;background:var(--cream);overflow:hidden;position:relative}
+@media (min-width:560px){.app{box-shadow:0 0 0 1px rgba(201,162,75,.25),0 30px 80px rgba(0,0,0,.55)}}
+
+/* bo'limlar */
+.section{position:relative;padding:72px 24px;text-align:center}
+.navy{background:var(--navy) var(--pattern);color:var(--on-navy)}
+.cream{background:var(--cream);color:var(--ink)}
+.title{font-family:var(--serif);font-weight:600;font-size:36px;line-height:1.15;margin:0 0 8px}
+.navy .title{color:var(--gold-light)}
+.cream .title{color:var(--navy)}
+.divider{display:block;width:220px;height:28px;margin:6px auto 28px;color:var(--gold)}
+.cream .divider{color:var(--gold-ink)}
+.lead{margin:0 auto 24px;max-width:34ch}
+
+/* tugmalar */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;
+  border-radius:999px;border:1.5px solid transparent;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;
+  transition:transform .15s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-gold{background:linear-gradient(180deg,#e6c97a,#c9a24b);color:var(--navy)}
+.btn-line{border-color:var(--gold);color:var(--gold-light);background:transparent}
+.cream .btn-line{border-color:var(--navy);color:var(--navy)}
+.btn-tg{background:#229ed9;color:#fff}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn-block{width:100%}
+
+/* boshqaruv tugmalari (til, ovoz) */
+.controls{position:fixed;inset:0;max-width:var(--frame);margin:0 auto;pointer-events:none;z-index:60}
+.lang{position:absolute;top:calc(12px + env(safe-area-inset-top));right:12px;display:flex;pointer-events:auto;
+  background:rgba(10,22,48,.82);border:1px solid rgba(201,162,75,.55);border-radius:999px;padding:3px;backdrop-filter:blur(6px)}
+.lang button{min-width:52px;min-height:44px;border:0;border-radius:999px;background:transparent;color:var(--on-navy);
+  font-weight:600;font-size:13px;letter-spacing:.06em;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--navy)}
+.sound{position:absolute;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));width:52px;height:52px;border-radius:50%;
+  border:1px solid rgba(201,162,75,.6);background:rgba(10,22,48,.85);color:var(--gold-light);pointer-events:auto;cursor:pointer;
+  display:none;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
+.sound svg{width:24px;height:24px}
+body.opened .sound{display:flex}
+.sound .off{display:none}.sound.muted .on{display:none}.sound.muted .off{display:block}
+
+/* ==================== A) SPLASH ==================== */
+.splash{position:fixed;top:0;bottom:0;left:0;right:0;max-width:var(--frame);margin:0 auto;z-index:50;
+  background:radial-gradient(circle at 50% 52%,rgba(201,162,75,.22),transparent 55%),var(--navy) var(--pattern);
+  color:var(--on-navy);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;
+  transition:opacity .6s ease}
+.splash.hide{opacity:0;pointer-events:none}
+.splash-top{font-family:var(--serif);font-size:32px;line-height:1.2;color:var(--gold-light);margin:0 0 6px;font-weight:600}
+.splash-sub{margin:0 0 18px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:rgba(248,243,230,.75)}
+.gift-btn{background:none;border:0;padding:10px;cursor:pointer;border-radius:24px;position:relative}
+.gift-btn svg{width:210px;height:210px;overflow:visible}
+.gift{animation:wiggle 3s ease-in-out infinite;transform-origin:100px 180px}
+.gift-lid{transform-box:fill-box;transform-origin:50% 100%;transition:transform .7s cubic-bezier(.3,.7,.3,1),opacity .7s}
+.opening .gift{animation:none}
+.opening .gift-lid{transform:translate(-30px,-150px) rotate(-28deg);opacity:0}
+.burst{position:absolute;left:50%;top:50%;width:120px;height:120px;margin:-60px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(255,236,180,.95),rgba(201,162,75,.4) 45%,transparent 70%);transform:scale(0);opacity:0}
+.opening .burst{animation:burst .9s ease-out forwards}
+.tap{margin-top:14px;font-size:16px;font-weight:500;color:var(--gold-light);animation:pulse 1.8s ease-in-out infinite}
+.splash .corner{position:absolute;width:86px;height:86px;color:var(--gold);opacity:.7}
+.corner.tl{top:16px;left:16px}.corner.tr{top:16px;right:16px;transform:scaleX(-1)}
+.corner.bl{bottom:16px;left:16px;transform:scaleY(-1)}.corner.br{bottom:16px;right:16px;transform:scale(-1)}
+.splash .corner.tr{top:72px}
+@keyframes wiggle{0%,70%,100%{transform:rotate(0)}75%{transform:rotate(-4deg)}80%{transform:rotate(4deg)}85%{transform:rotate(-3deg)}90%{transform:rotate(2deg)}}
+@keyframes burst{0%{transform:scale(0);opacity:1}100%{transform:scale(6);opacity:0}}
+@keyframes pulse{50%{opacity:.45}}
+
+/* effektlar qatlami */
+.fx{position:fixed;inset:0;max-width:var(--frame);margin:0 auto;pointer-events:none;z-index:55;overflow:hidden}
+.confetti{position:absolute;left:50%;top:48%;width:8px;height:12px;border-radius:2px}
+.balloon-fly{position:absolute;bottom:-160px;width:64px}
+
+/* ==================== B) BOSH EKRAN ==================== */
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:96px 24px 88px}
+.arch{position:absolute;inset:64px 18px 28px;width:calc(100% - 36px);height:calc(100% - 92px);color:var(--gold);opacity:.6}
+.hero .reveal{position:relative;z-index:1}
+.eyebrow{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-light);margin:0 0 22px;font-weight:600}
+.portrait{width:172px;height:172px;border-radius:50%;padding:5px;margin:0 auto 22px;
+  background:conic-gradient(from 30deg,#e6c97a,#9c7a2e,#e6c97a,#c9a24b,#e6c97a)}
+.portrait > *{width:100%;height:100%;border-radius:50%;border:4px solid var(--navy);object-fit:cover}
+.portrait .ph{display:flex;align-items:center;justify-content:center;background:var(--navy-2) var(--pattern);
+  font-family:var(--serif);font-size:80px;font-weight:600;color:var(--gold-light);line-height:1}
+.name{font-family:var(--serif);font-weight:600;font-style:italic;font-size:clamp(42px,13vw,58px);line-height:1.05;margin:0;color:#fff}
+.hero-date{display:flex;align-items:center;gap:12px;margin:18px 0 0;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light)}
+.hero-date::before,.hero-date::after{content:"";width:28px;height:1px;background:var(--gold)}
+.scroll-hint{position:absolute;bottom:22px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:2px;
+  font-size:13px;color:rgba(248,243,230,.8);text-decoration:none;min-height:44px}
+.scroll-hint svg{width:22px;height:22px;color:var(--gold);animation:bob 1.8s ease-in-out infinite}
+.hero-balloons{position:absolute;top:70px;width:74px;color:var(--gold)}
+.hero-balloons.l{left:10px}.hero-balloons.r{right:10px;transform:scaleX(-1)}
+.hero-balloons svg{animation:float 5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+@keyframes float{50%{transform:translateY(-10px) rotate(2deg)}}
+
+/* ==================== C) TAKLIF ==================== */
+.card{position:relative;background:var(--paper);border:1px solid #e2d3ae;border-radius:22px;padding:40px 24px 34px;
+  box-shadow:0 12px 30px rgba(15,31,61,.08)}
+.card .corner{position:absolute;width:44px;height:44px;color:var(--gold-ink);opacity:.55}
+.card .corner.tl{top:8px;left:8px}.card .corner.tr{top:8px;right:8px}.card .corner.bl{bottom:8px;left:8px}.card .corner.br{bottom:8px;right:8px}
+.greeting{margin:0 0 22px;font-size:16px;color:var(--gold-ink);font-weight:500}
+.greeting strong{color:var(--navy);font-weight:600}
+.invite-head{font-family:var(--serif);font-size:42px;font-weight:700;color:var(--navy);margin:0 0 14px;line-height:1.1}
+.invite p.body{font-size:17px;line-height:1.75;margin:0 0 16px}
+.invite p.body:first-of-type{font-weight:500}
+.sign{margin-top:22px}
+.sign span{display:block;font-size:15px;color:#5a5f6b}
+.sign strong{display:block;font-family:var(--serif);font-style:italic;font-weight:600;font-size:36px;color:var(--gold-ink);line-height:1.2}
+
+/* ==================== D) TO'Y KUNI ==================== */
+.date-card{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin:0 auto 10px;max-width:340px}
+.date-card .side{font-size:14px;letter-spacing:.14em;text-transform:uppercase;padding:10px 0;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.date-card .day{font-variant-numeric:lining-nums;font-family:var(--serif);font-size:84px;font-weight:600;line-height:1;color:var(--gold-light);padding:0 6px}
+.date-month{font-size:15px;letter-spacing:.24em;text-transform:uppercase;margin:0 0 30px;color:var(--gold-light)}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 10px}
+.countdown div{border:1px solid rgba(201,162,75,.55);border-radius:14px;padding:12px 2px 10px;background:rgba(255,255,255,.03)}
+.countdown b{display:block;font-family:var(--sans);font-size:30px;font-weight:600;line-height:1;color:#fff;font-variant-numeric:lining-nums tabular-nums}
+.countdown span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(248,243,230,.75)}
+.cd-label{font-size:14px;color:rgba(248,243,230,.75);margin:0 0 28px}
+.arrived{font-family:var(--serif);font-size:38px;font-weight:600;color:var(--gold-light);margin:8px 0 28px}
+
+/* ==================== E) DASTUR ==================== */
+.timeline{list-style:none;margin:0;padding:0;text-align:left;position:relative}
+.timeline::before{content:"";position:absolute;left:79px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),rgba(201,162,75,.25))}
+.timeline li{display:grid;grid-template-columns:64px 32px 1fr;padding:0 0 28px}
+.timeline li:last-child{padding-bottom:0}
+.timeline time{font-variant-numeric:lining-nums;font-family:var(--serif);font-size:24px;font-weight:700;color:var(--navy);line-height:1.2;text-align:right}
+.timeline .dot{width:16px;height:16px;border-radius:50%;background:var(--gold);border:3px solid var(--cream);box-shadow:0 0 0 1.5px var(--gold);margin:6px auto 0;position:relative}
+.timeline h3{margin:0 0 4px;font-size:17px;line-height:1.35;color:var(--navy)}
+.timeline p{margin:0;font-size:16px;line-height:1.55;color:#454b58}
+
+/* ==================== F) MANZIL ==================== */
+.venue-photo{border-radius:20px;overflow:hidden;border:1.5px solid rgba(201,162,75,.6);aspect-ratio:16/10;margin:0 0 22px;background:var(--navy-2)}
+.venue-photo img{width:100%;height:100%;object-fit:cover}
+.venue-photo svg{width:100%;height:100%;color:var(--gold)}
+.address{font-family:var(--serif);font-size:26px;font-weight:600;line-height:1.3;margin:0 0 18px;color:#fff}
+.copy-status{min-height:24px;font-size:14px;color:var(--gold-light);margin:8px 0 0}
+
+/* ==================== G) RSVP ==================== */
+.form{text-align:left}
+.field{margin:0 0 20px;border:0;padding:0}
+.field > label,.field legend{display:block;font-weight:600;font-size:15px;margin:0 0 8px;color:var(--navy);padding:0}
+.opt{font-weight:400;color:#6b6f78}
+.input{width:100%;min-height:52px;padding:12px 16px;border:1.5px solid #d6c59d;border-radius:14px;background:#fff;font-size:16px}
+textarea.input{min-height:96px;resize:vertical}
+.input:focus{border-color:var(--navy);outline:none;box-shadow:0 0 0 3px rgba(201,162,75,.45)}
+.choices{display:grid;gap:10px}
+.choice{display:flex;align-items:center;gap:12px;min-height:54px;padding:10px 16px;border:1.5px solid #d6c59d;border-radius:14px;background:#fff;cursor:pointer;font-size:16px}
+.choice input{width:22px;height:22px;accent-color:var(--navy);margin:0;flex:none}
+.choice:has(input:checked){border-color:var(--navy);background:#fbf3df}
+.stepper{display:flex;align-items:center;gap:10px}
+.stepper button{width:52px;height:52px;border-radius:14px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);font-size:24px;line-height:1;cursor:pointer}
+.stepper button:disabled{opacity:.35;cursor:default}
+.stepper output{min-width:56px;text-align:center;font-family:var(--sans);font-size:26px;font-weight:700;color:var(--navy)}
+.err{color:#a3271a;font-size:14px;margin:6px 0 0}
+.done{text-align:center}
+.done .check{width:64px;height:64px;margin:0 auto 14px;color:var(--gold-ink)}
+.done p{font-size:17px;margin:0 0 18px}
+.hint{font-size:14px!important;color:#5a5f6b}
+.link-btn{background:none;border:0;color:var(--navy);text-decoration:underline;min-height:44px;cursor:pointer;font-size:15px;margin-top:6px}
+
+/* ==================== H) YAKUN ==================== */
+.finale{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+.finale .big{font-family:var(--serif);font-size:48px;font-weight:600;color:var(--gold-light);margin:0 0 6px;line-height:1.1}
+.finale .sign span{color:rgba(248,243,230,.75)}
+.finale .sign strong{color:var(--gold-light)}
+.credit{margin:40px 0 0;font-size:12px;letter-spacing:.08em;color:rgba(248,243,230,.45)}
+.maker{margin-top:28px;text-align:left;background:rgba(255,255,255,.06);border:1px dashed var(--gold);border-radius:16px;padding:18px}
+.maker label{display:block;font-weight:600;margin:0 0 8px}
+.maker .input{color:var(--ink)}
+.maker output{display:block;word-break:break-all;font-size:14px;margin:12px 0;color:var(--gold-light)}
+
+/* ==================== ANIMATSIYA ==================== */
+.anim .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.anim .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body class="locked">
+
+<!-- SVG bezaklar (bir marta chiziladi, keyin <use> bilan ishlatiladi) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ecd28a"/><stop offset="1" stop-color="#b8903c"/></linearGradient>
+    <linearGradient id="g-gold2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1dc9f"/><stop offset="1" stop-color="#c9a24b"/></linearGradient>
+  </defs>
+  <!-- naqsh ajratgich -->
+  <symbol id="s-divider" viewBox="0 0 220 28">
+    <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+      <path d="M4 14h66M150 14h66"/>
+      <path d="M70 14c8-7 16-7 22 0-6 7-14 7-22 0zM150 14c-8-7-16-7-22 0 6 7 14 7 22 0z"/>
+      <path d="M110 2c4 6 4 9 0 12-4-3-4-6 0-12zM110 26c4-6 4-9 0-12-4 3-4 6 0 12zM98 14c6-4 9-4 12 0-3 4-6 4-12 0zM122 14c-6-4-9-4-12 0 3 4 6 4 12 0z"/>
+      <circle cx="110" cy="14" r="2.4" fill="currentColor"/>
+      <path d="M40 14l4-4 4 4-4 4zM172 14l4-4 4 4-4 4z"/>
+    </g>
+  </symbol>
+  <!-- burchak naqshi -->
+  <symbol id="s-corner" viewBox="0 0 86 86">
+    <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+      <path d="M4 82V20Q4 4 20 4h62"/><path d="M12 82V26q0-14 14-14h56"/>
+      <path d="M24 24c10 0 16 6 16 16-10 0-16-6-16-16z"/><path d="M40 40c8-6 16-6 22 0-6 6-14 6-22 0zM40 40c-6 8-6 16 0 22 6-6 6-14 0-22z"/>
+      <circle cx="24" cy="24" r="2" fill="currentColor"/>
+    </g>
+  </symbol>
+  <!-- shar -->
+  <symbol id="s-balloon" viewBox="0 0 60 130">
+    <path d="M30 4C14 4 4 18 4 34c0 20 16 38 26 40 10-2 26-20 26-40C56 18 46 4 30 4z" fill="currentColor"/>
+    <path d="M18 20c-5 5-6 11-5 17" stroke="#fff" stroke-opacity=".55" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M26 74h8l-4 6z" fill="currentColor"/>
+    <path d="M30 80c-6 10 6 18 0 28s4 16 0 22" stroke="currentColor" stroke-opacity=".7" stroke-width="1.2" fill="none"/>
+  </symbol>
+</svg>
+
+<div class="controls">
+  <div class="lang" role="group" aria-label="Ёзув / Yozuv">
+    <button type="button" data-lang="cyr" aria-pressed="true" lang="uz-Cyrl">КИР</button>
+    <button type="button" data-lang="lat" aria-pressed="false" lang="uz-Latn">LOT</button>
+  </div>
+  <button type="button" class="sound" id="sound" data-t-aria="soundOff" aria-label="Овозни ўчириш">
+    <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+    <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>
+  </button>
+</div>
+
+<!-- ==================== A) SPLASH ==================== -->
+<div class="splash" id="splash" role="dialog" aria-modal="true" aria-labelledby="splash-title">
+  <svg class="corner tl" aria-hidden="true"><use href="#s-corner"/></svg>
+  <svg class="corner tr" aria-hidden="true"><use href="#s-corner"/></svg>
+  <svg class="corner bl" aria-hidden="true"><use href="#s-corner"/></svg>
+  <svg class="corner br" aria-hidden="true"><use href="#s-corner"/></svg>
+  <p class="splash-top" id="splash-title" data-t="splashTitle">Сизга таклифнома бор</p>
+  <p class="splash-sub" data-t="splashSub">Муҳаммаджоннинг хатна тўйи</p>
+  <button type="button" class="gift-btn" id="open-btn" data-t-aria="tapToOpen" aria-label="Очиш учун босинг">
+    <span class="burst" aria-hidden="true"></span>
+    <svg viewBox="0 0 200 200" aria-hidden="true">
+      <ellipse cx="100" cy="188" rx="72" ry="8" fill="#000" opacity=".3"/>
+      <g class="gift">
+        <rect x="30" y="94" width="140" height="90" rx="6" fill="url(#g-gold)"/>
+        <g fill="none" stroke="#8a6a24" stroke-opacity=".55" stroke-width="1.2">
+          <path d="M55 126l8-8 8 8-8 8zM129 126l8-8 8 8-8 8zM55 160l8-8 8 8-8 8zM129 160l8-8 8 8-8 8z"/>
+        </g>
+        <rect x="89" y="94" width="22" height="90" fill="#182d55"/>
+        <path d="M89 94v90M111 94v90" stroke="#e6c97a" stroke-width="1.5"/>
+        <g class="gift-lid">
+          <rect x="22" y="70" width="156" height="28" rx="5" fill="url(#g-gold2)"/>
+          <rect x="89" y="70" width="22" height="28" fill="#182d55"/>
+          <path d="M89 70v28M111 70v28" stroke="#e6c97a" stroke-width="1.5"/>
+          <path d="M100 70C84 38 50 36 55 58c3 14 28 14 45 12z" fill="#182d55" stroke="#e6c97a" stroke-width="1.5"/>
+          <path d="M100 70c16-32 50-34 45-12-3 14-28 14-45 12z" fill="#182d55" stroke="#e6c97a" stroke-width="1.5"/>
+          <circle cx="100" cy="68" r="8" fill="#0f1f3d" stroke="#e6c97a" stroke-width="1.5"/>
+        </g>
+      </g>
+    </svg>
+  </button>
+  <p class="tap" aria-hidden="true" data-t="tapToOpen">Очиш учун босинг</p>
+</div>
+
+<div class="fx" id="fx" aria-hidden="true"></div>
+
+<main class="app" id="main" inert>
+
+  <!-- ==================== B) BOSH EKRAN ==================== -->
+  <header class="section navy hero" id="top">
+    <svg class="arch" viewBox="0 0 320 520" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1.3" vector-effect="non-scaling-stroke">
+        <path vector-effect="non-scaling-stroke" d="M6 520V190C6 108 84 52 160 6c76 46 154 102 154 184v330"/>
+        <path vector-effect="non-scaling-stroke" d="M16 520V194C16 118 88 66 160 22c72 44 144 96 144 172v326"/>
+      </g>
+    </svg>
+    <div class="hero-balloons l" aria-hidden="true"><svg viewBox="0 0 74 150">
+      <use href="#s-balloon" x="0" y="10" width="44" height="100" style="color:#c9a24b"/>
+      <use href="#s-balloon" x="28" y="0" width="44" height="100" style="color:#e9dcc0"/>
+      <use href="#s-balloon" x="14" y="40" width="40" height="100" style="color:#3b5b94"/></svg></div>
+    <div class="hero-balloons r" aria-hidden="true"><svg viewBox="0 0 74 150">
+      <use href="#s-balloon" x="0" y="10" width="44" height="100" style="color:#e9dcc0"/>
+      <use href="#s-balloon" x="28" y="0" width="44" height="100" style="color:#c9a24b"/>
+      <use href="#s-balloon" x="14" y="40" width="40" height="100" style="color:#b85a3e"/></svg></div>
+
+    <p class="eyebrow reveal" data-t="eyebrow">Хатна тўйи</p>
+    <div class="portrait reveal" id="portrait"><div class="ph" aria-hidden="true" data-t="monogram">М</div></div>
+    <h1 class="name reveal" id="hero-title" tabindex="-1" data-t="name">Муҳаммаджон</h1>
+    <p class="hero-date reveal" data-t="heroDate">25 октябрь 2026</p>
+    <a class="scroll-hint" href="#invite">
+      <span data-t="scroll">Пастга суринг</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+  </header>
+
+  <!-- ==================== C) TAKLIF ==================== -->
+  <section class="section cream invite" id="invite" aria-labelledby="invite-head">
+    <div class="card reveal">
+      <svg class="corner tl" aria-hidden="true" viewBox="0 0 86 86"><use href="#s-corner"/></svg>
+      <svg class="corner tr" aria-hidden="true" viewBox="0 0 86 86" style="transform:scaleX(-1)"><use href="#s-corner"/></svg>
+      <svg class="corner bl" aria-hidden="true" viewBox="0 0 86 86" style="transform:scaleY(-1)"><use href="#s-corner"/></svg>
+      <svg class="corner br" aria-hidden="true" viewBox="0 0 86 86" style="transform:scale(-1)"><use href="#s-corner"/></svg>
+      <p class="greeting" id="greeting"></p>
+      <h2 class="invite-head" id="invite-head" data-t="inviteHead">Бизда катта тўй!</h2>
+      <p class="body" data-t="invite1">Уйимиз нури, паҳлавон ўғлимиз Муҳаммаджон катта йигит бўлмоқда!</p>
+      <p class="body" data-t="invite2">Унинг хатна тўйини энг яқин ва қадрли инсонларимиз даврасида нишонламоқчимиз. Эзгу дуоларингиз ва табассумингиз билан даврамизни тўлдиришингизни кутиб қоламиз.</p>
+      <svg class="divider" style="margin:18px auto 0" aria-hidden="true"><use href="#s-divider"/></svg>
+      <div class="sign"><span data-t="regards">Самимий ҳурмат билан,</span><strong data-t="host">Шохсанам</strong></div>
+    </div>
+  </section>
+
+  <!-- ==================== D) TO'Y KUNI ==================== -->
+  <section class="section navy" aria-labelledby="date-title">
+    <h2 class="title reveal" id="date-title" data-t="dateTitle">Тўй куни</h2>
+    <svg class="divider reveal" aria-hidden="true"><use href="#s-divider"/></svg>
+    <div class="date-card reveal">
+      <span class="side" data-t="weekday">Якшанба</span>
+      <span class="day">25</span>
+      <span class="side" data-t="time">Соат 13:00</span>
+    </div>
+    <p class="date-month reveal" data-t="monthYear">Октябрь 2026</p>
+    <div class="reveal">
+      <div id="countdown-wrap">
+        <div class="countdown" aria-hidden="true">
+          <div><b id="cd-d">00</b><span data-t="days">кун</span></div>
+          <div><b id="cd-h">00</b><span data-t="hours">соат</span></div>
+          <div><b id="cd-m">00</b><span data-t="mins">дақиқа</span></div>
+          <div><b id="cd-s">00</b><span data-t="secs">сония</span></div>
+        </div>
+        <p class="cd-label" data-t="untilWedding">Тўйгача қолди</p>
+      </div>
+      <p class="arrived" id="arrived" hidden data-t="arrived">Тўй куни келди!</p>
+      <div class="btn-row">
+        <button type="button" class="btn btn-gold" id="ics-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg>
+          <span data-t="addCal">Тақвимга қўшиш</span>
+        </button>
+        <a class="btn btn-line" id="gcal-btn" target="_blank" rel="noopener">Google Calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== E) DASTUR ==================== -->
+  <section class="section cream" aria-labelledby="program-title">
+    <h2 class="title reveal" id="program-title" data-t="programTitle">Хатна тўйи дастури</h2>
+    <svg class="divider reveal" aria-hidden="true"><use href="#s-divider"/></svg>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <!-- ==================== F) MANZIL ==================== -->
+  <section class="section navy" aria-labelledby="venue-title">
+    <h2 class="title reveal" id="venue-title" data-t="venueTitle">Манзил</h2>
+    <svg class="divider reveal" aria-hidden="true"><use href="#s-divider"/></svg>
+    <div class="venue-photo reveal" id="venue-photo">
+      <svg viewBox="0 0 320 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3">
+        <path d="M40 170h240M60 170V92h200v78M60 92l100-46 100 46"/>
+        <path d="M92 170v-44c0-14 24-14 24 0v44M148 170v-50c0-18 24-18 24 0v50M204 170v-44c0-14 24-14 24 0v44"/>
+        <path d="M150 66c6-10 14-10 20 0" /><circle cx="160" cy="76" r="3" fill="currentColor"/>
+        <path d="M20 182h280" stroke-opacity=".5"/>
+      </svg>
+    </div>
+    <p class="address reveal" data-t="address">Олтиариқ тумани, «Лола» тўйхонаси</p>
+    <div class="btn-row reveal">
+      <a class="btn btn-gold" id="gmaps" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        Google Maps</a>
+      <a class="btn btn-line" id="ymaps" target="_blank" rel="noopener" data-t="yandex">Яндекс Хариталар</a>
+      <button type="button" class="btn btn-line" id="copy-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>
+        <span data-t="copy">Манзилни нусхалаш</span></button>
+    </div>
+    <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+  </section>
+
+  <!-- ==================== G) JAVOB XATI ==================== -->
+  <section class="section cream" id="rsvp" aria-labelledby="rsvp-title">
+    <h2 class="title reveal" id="rsvp-title" data-t="rsvpTitle">Жавоб хати</h2>
+    <svg class="divider reveal" aria-hidden="true"><use href="#s-divider"/></svg>
+    <p class="lead reveal" data-t="rsvpLead">Илтимос, тўйга келиш-келмаслигингизни олдиндан билдиринг.</p>
+    <div class="card reveal">
+      <form class="form" id="rsvp-form" novalidate>
+        <div class="field">
+          <label for="f-name"><span data-t="fName">Исмингиз</span> *</label>
+          <input class="input" id="f-name" name="name" maxlength="60" autocomplete="name" required aria-describedby="e-name" data-t-ph="fNamePh" placeholder="Масалан: Азиз ака">
+          <p class="err" id="e-name" hidden data-t="eName">Илтимос, исмингизни ёзинг</p>
+        </div>
+        <fieldset class="field" aria-describedby="e-att">
+          <legend><span data-t="fAttend">Келасизми?</span> *</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="attending" value="yes"><span data-t="yes">Албатта келаман</span></label>
+            <label class="choice"><input type="radio" name="attending" value="no"><span data-t="no">Афсуски, кела олмайман</span></label>
+          </div>
+          <p class="err" id="e-att" hidden data-t="eAttend">Илтимос, бир вариантни танланг</p>
+        </fieldset>
+        <div class="field" id="guests-field">
+          <label id="guests-label" data-t="fGuests">Неча киши?</label>
+          <div class="stepper" role="group" aria-labelledby="guests-label">
+            <button type="button" id="minus" data-t-aria="less" aria-label="Камайтириш">−</button>
+            <output id="guests" aria-live="polite">1</output>
+            <button type="button" id="plus" data-t-aria="more" aria-label="Кўпайтириш">+</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-wish"><span data-t="fWish">Тилаклар</span> <span class="opt" data-t="optional">(ихтиёрий)</span></label>
+          <textarea class="input" id="f-wish" name="wish" maxlength="500" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block" style="min-height:56px;font-size:16px" data-t="send">Жавобни юбориш</button>
+        <p class="err" id="e-send" role="alert" hidden></p>
+      </form>
+
+      <div class="done" id="done" hidden tabindex="-1">
+        <svg class="check" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="28"/><path d="M20 33l8 8 16-17"/></svg>
+        <p id="done-text"></p>
+        <a class="btn btn-tg btn-block" id="tg-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.5 4.3L2.9 11.5c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.8.8s.6-.2.9-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.2-15.1c.3-1.3-.5-1.9-1.6-1.5zM9.3 14.6l9.2-5.8c.4-.3.8-.1.5.2l-7.6 6.9-.3 3.3-1.8-4.6z"/></svg>
+          <span data-t="tgSend">Telegram орқали жавоб бериш</span></a>
+        <p class="hint" data-t="tgHint">Жавобингиз бизга етиб бориши учун Telegram'да «Юбориш» тугмасини босинг.</p>
+        <button type="button" class="link-btn" id="edit-btn" data-t="edit">Жавобни ўзгартириш</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== H) YAKUN ==================== -->
+  <footer class="section navy finale">
+    <div class="reveal" aria-hidden="true" style="width:120px;margin:0 auto 10px"><svg viewBox="0 0 120 130">
+      <use href="#s-balloon" x="0" y="14" width="46" height="100" style="color:#3b5b94"/>
+      <use href="#s-balloon" x="37" y="0" width="46" height="100" style="color:#c9a24b"/>
+      <use href="#s-balloon" x="74" y="14" width="46" height="100" style="color:#e9dcc0"/></svg></div>
+    <p class="big reveal" data-t="waiting">Сизни кутамиз!</p>
+    <svg class="divider reveal" aria-hidden="true"><use href="#s-divider"/></svg>
+    <div class="sign reveal"><span data-t="regards">Самимий ҳурмат билан,</span><strong data-t="host">Шохсанам</strong></div>
+
+    <!-- Shaxsiy havola yasash: saytni ...index.html#havola deb oching -->
+    <div class="maker" id="maker" hidden>
+      <label for="maker-name">Mehmon havolasini yaratish</label>
+      <input class="input" id="maker-name" maxlength="40" placeholder="Masalan: Aziz aka">
+      <output id="maker-out"></output>
+      <button type="button" class="btn btn-gold btn-block" id="maker-copy">Havolani nusxalash</button>
+    </div>
+
+    <p class="credit" id="credit">Taklifnoma</p>
+  </footer>
+</main>
+
+<script>
+/* =====================================================================
+   SOZLAMALAR — faqat shu qismni o'zgartirasiz
+   Katta harfli qiymatlar (TELEGRAM_USERNAME va h.k.) — placeholder.
+   Ular almashtirilmaguncha sayt baribir ishlaydi (zaxira variant bilan).
+   ===================================================================== */
+const CONFIG = {
+  start: '2026-10-25T13:00:00+05:00',   // to'y boshlanishi (Toshkent vaqti)
+  end:   '2026-10-25T17:00:00+05:00',   // taqvim uchun tugash vaqti
+  telegram:   'TELEGRAM_USERNAME',      // @ belgisisiz, masalan: shohsanam_uz
+  googleMaps: 'GOOGLE_MAPS_URL',        // https://maps.app.goo.gl/...
+  yandexMaps: 'YANDEX_MAPS_URL',        // https://yandex.uz/maps/-/...
+  photo:      'MUHAMMADJON_PHOTO',      // masalan: muhammadjon.webp (index.html yonida)
+  venuePhoto: 'VENUE_PHOTO',            // masalan: toyxona.webp
+  music:      'MUSIC_FILE',             // masalan: music.mp3
+  siteName:   'SAYT_NOMI',              // pastdagi mayda imzo
+  mapQuery:   'Лола тўйхонаси, Олтиариқ', // xarita havolasi bo'lmasa shu bo'yicha qidiradi
+};
+
+/* =====================================================================
+   MATNLAR (kirill / lotin)
+   ===================================================================== */
+const T = {
+  cyr: {
+    splashTitle:'Сизга таклифнома бор', splashSub:'Муҳаммаджоннинг хатна тўйи', tapToOpen:'Очиш учун босинг',
+    eyebrow:'Хатна тўйи', monogram:'М', name:'Муҳаммаджон', heroDate:'25 октябрь 2026', scroll:'Пастга суринг',
+    greeting:'Ҳурматли {name}, сизни тўйимизга таклиф қиламиз', guest:'меҳмон',
+    inviteHead:'Бизда катта тўй!',
+    invite1:'Уйимиз нури, паҳлавон ўғлимиз Муҳаммаджон катта йигит бўлмоқда!',
+    invite2:'Унинг хатна тўйини энг яқин ва қадрли инсонларимиз даврасида нишонламоқчимиз. Эзгу дуоларингиз ва табассумингиз билан даврамизни тўлдиришингизни кутиб қоламиз.',
+    regards:'Самимий ҳурмат билан,', host:'Шохсанам',
+    dateTitle:'Тўй куни', weekday:'Якшанба', time:'Соат 13:00', monthYear:'Октябрь 2026',
+    days:'кун', hours:'соат', mins:'дақиқа', secs:'сония', untilWedding:'Тўйгача қолди', arrived:'Тўй куни келди!',
+    addCal:'Тақвимга қўшиш',
+    programTitle:'Хатна тўйи дастури',
+    program:[
+      ['13:00','Меҳмонларни кутиб олиш','Тўйхона эшиги олдида карнай-сурнай садолари ва илиқ кутиб олиш.'],
+      ['13:30','Тўй боланинг кириб келиши ва табриклар','Тўй болани шодиёна билан даврага олиб кириш ва қутловлар.'],
+      ['14:00','Зиёфат дастурхони','Байрам дастурхони, миллий таомлар ва нуронийларнинг дуолари.'],
+      ['15:30','Қизиқарли шоу-дастур ва мусиқа','Жонли ижро, миллий ва замонавий рақслар, кўнгилочар лаҳзалар.'],
+      ['16:30','Тўй торти ва эсдалик суратга тушиш','Ширин якун, тўй тортини кесиш ва қариндошлар билан умумий эсдалик суратлар.'],
+    ],
+    venueTitle:'Манзил', address:'Олтиариқ тумани, «Лола» тўйхонаси', yandex:'Яндекс Хариталар',
+    copy:'Манзилни нусхалаш', copied:'Манзил нусхаланди', copyFail:'Нусхалаб бўлмади',
+    rsvpTitle:'Жавоб хати', rsvpLead:'Илтимос, тўйга келиш-келмаслигингизни олдиндан билдиринг.',
+    fName:'Исмингиз', fNamePh:'Масалан: Азиз ака', eName:'Илтимос, исмингизни ёзинг',
+    fAttend:'Келасизми?', yes:'Албатта келаман', no:'Афсуски, кела олмайман', eAttend:'Илтимос, бир вариантни танланг',
+    fGuests:'Неча киши?', less:'Камайтириш', more:'Кўпайтириш',
+    fWish:'Тилаклар', optional:'(ихтиёрий)', send:'Жавобни юбориш',
+    doneYes:'Раҳмат! Жавобингиз қабул қилинди. Сизни тўйимизда интизорлик билан кутамиз.',
+    doneNo:'Раҳмат! Жавобингиз қабул қилинди. Эзгу тилакларингиз учун ташаккур.',
+    tgSend:'Telegram орқали жавоб бериш', tgHint:'Жавобингиз бизга етиб бориши учун Telegram\'да «Юбориш» тугмасини босинг.',
+    tgMissing:'Telegram манзили ҳали киритилмаган. Қайта уриниб кўринг ёки бизга қўнғироқ қилинг.',
+    edit:'Жавобни ўзгартириш',
+    msg:'Ассалому алайкум! Муҳаммаджоннинг хатна тўйига жавоб:', mName:'Исм', mAns:'Жавоб', mCount:'Киши сони', mWish:'Тилак',
+    waiting:'Сизни кутамиз!', soundOff:'Овозни ўчириш', soundOn:'Овозни ёқиш',
+    calTitle:'Муҳаммаджоннинг хатна тўйи', calDesc:'Самимий ҳурмат билан, Шохсанам',
+  },
+  lat: {
+    splashTitle:'Sizga taklifnoma bor', splashSub:'Muhammadjonning xatna to‘yi', tapToOpen:'Ochish uchun bosing',
+    eyebrow:'Xatna to‘yi', monogram:'M', name:'Muhammadjon', heroDate:'25-oktabr, 2026', scroll:'Pastga suring',
+    greeting:'Hurmatli {name}, sizni to‘yimizga taklif qilamiz', guest:'mehmon',
+    inviteHead:'Bizda katta to‘y!',
+    invite1:'Uyimiz nuri, pahlavon o‘g‘limiz Muhammadjon katta yigit bo‘lmoqda!',
+    invite2:'Uning xatna to‘yini eng yaqin va qadrli insonlarimiz davrasida nishonlamoqchimiz. Ezgu duolaringiz va tabassumingiz bilan davramizni to‘ldirishingizni kutib qolamiz.',
+    regards:'Samimiy hurmat bilan,', host:'Shohsanam',
+    dateTitle:'To‘y kuni', weekday:'Yakshanba', time:'Soat 13:00', monthYear:'Oktabr 2026',
+    days:'kun', hours:'soat', mins:'daqiqa', secs:'soniya', untilWedding:'To‘ygacha qoldi', arrived:'To‘y kuni keldi!',
+    addCal:'Taqvimga qo‘shish',
+    programTitle:'Xatna to‘yi dasturi',
+    program:[
+      ['13:00','Mehmonlarni kutib olish','To‘yxona eshigi oldida karnay-surnay sadolari va iliq kutib olish.'],
+      ['13:30','To‘y bolaning kirib kelishi va tabriklar','To‘y bolani shodiyona bilan davraga olib kirish va qutlovlar.'],
+      ['14:00','Ziyofat dasturxoni','Bayram dasturxoni, milliy taomlar va nuroniylarning duolari.'],
+      ['15:30','Qiziqarli shou-dastur va musiqa','Jonli ijro, milliy va zamonaviy raqslar, ko‘ngilochar lahzalar.'],
+      ['16:30','To‘y torti va esdalik suratga tushish','Shirin yakun, to‘y tortini kesish va qarindoshlar bilan umumiy esdalik suratlar.'],
+    ],
+    venueTitle:'Manzil', address:'Oltiariq tumani, «Lola» to‘yxonasi', yandex:'Yandex Xaritalar',
+    copy:'Manzilni nusxalash', copied:'Manzil nusxalandi', copyFail:'Nusxalab bo‘lmadi',
+    rsvpTitle:'Javob xati', rsvpLead:'Iltimos, to‘yga kelish-kelmasligingizni oldindan bildiring.',
+    fName:'Ismingiz', fNamePh:'Masalan: Aziz aka', eName:'Iltimos, ismingizni yozing',
+    fAttend:'Kelasizmi?', yes:'Albatta kelaman', no:'Afsuski, kela olmayman', eAttend:'Iltimos, bitta variantni tanlang',
+    fGuests:'Necha kishi?', less:'Kamaytirish', more:'Ko‘paytirish',
+    fWish:'Tilaklar', optional:'(ixtiyoriy)', send:'Javobni yuborish',
+    doneYes:'Rahmat! Javobingiz qabul qilindi. Sizni to‘yimizda intizorlik bilan kutamiz.',
+    doneNo:'Rahmat! Javobingiz qabul qilindi. Ezgu tilaklaringiz uchun tashakkur.',
+    tgSend:'Telegram orqali javob berish', tgHint:'Javobingiz bizga yetib borishi uchun Telegram’da «Yuborish» tugmasini bosing.',
+    tgMissing:'Telegram manzili hali kiritilmagan. Qayta urinib ko‘ring yoki bizga qo‘ng‘iroq qiling.',
+    edit:'Javobni o‘zgartirish',
+    msg:'Assalomu alaykum! Muhammadjonning xatna to‘yiga javob:', mName:'Ism', mAns:'Javob', mCount:'Kishi soni', mWish:'Tilak',
+    waiting:'Sizni kutamiz!', soundOff:'Ovozni o‘chirish', soundOn:'Ovozni yoqish',
+    calTitle:'Muhammadjonning xatna to‘yi', calDesc:'Samimiy hurmat bilan, Shohsanam',
+  },
+};
+
+/* ===================================================================== */
+const $ = (s) => document.querySelector(s);
+const isSet = (v) => v && !/^[A-Z_]+$/.test(v);           // placeholder emasmi?
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const store = {
+  get(k){ try { return localStorage.getItem(k); } catch { return null; } },
+  set(k,v){ try { localStorage.setItem(k,v); } catch {} },
+};
+let lang = store.get('taklifnoma.lang') === 'lat' ? 'lat' : 'cyr';
+const t = (k) => T[lang][k];
+
+/* ---------- shaxsiy havola: ?mehmon=Aziz aka ---------- */
+const guestName = (() => {
+  const raw = new URLSearchParams(location.search).get('mehmon') || '';
+  return raw.replace(/[\u0000-\u001f\u007f<>]/g, '').replace(/\s+/g, ' ').trim().slice(0, 40);
+})();
+if (guestName) $('#f-name').value = guestName;
+
+/* ---------- til ---------- */
+function renderGreeting() {
+  // textContent ishlatiladi — HTML sifatida talqin qilinmaydi (xavfsiz)
+  const el = $('#greeting'); el.textContent = '';
+  const [before, after] = t('greeting').split('{name}');
+  const b = document.createElement('strong'); b.textContent = guestName || t('guest');
+  el.append(before, b, after);
+}
+function renderProgram() {
+  const ol = $('#timeline'); ol.textContent = '';
+  t('program').forEach(([time, title, desc], i) => {
+    const li = document.createElement('li');
+    li.dataset.i = String(i);
+    li.className = 'reveal' + (!io || seen.has(li.dataset.i) ? ' in' : '');
+    if (io && revealStarted && !seen.has(li.dataset.i)) io.observe(li);
+    const tm = document.createElement('time'); tm.textContent = time;
+    const dot = document.createElement('span'); dot.className = 'dot';
+    const box = document.createElement('div');
+    const h = document.createElement('h3'); h.textContent = title;
+    const p = document.createElement('p'); p.textContent = desc;
+    box.append(h, p); li.append(tm, dot, box); ol.append(li);
+  });
+}
+function applyLang(l) {
+  lang = l; store.set('taklifnoma.lang', l);
+  document.documentElement.lang = l === 'cyr' ? 'uz-Cyrl' : 'uz-Latn';
+  document.querySelectorAll('[data-t]').forEach(el => el.textContent = t(el.dataset.t));
+  document.querySelectorAll('[data-t-aria]').forEach(el => el.setAttribute('aria-label', t(el.dataset.tAria)));
+  document.querySelectorAll('[data-t-ph]').forEach(el => el.placeholder = t(el.dataset.tPh));
+  document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === l)));
+  renderGreeting(); renderProgram(); updateSoundLabel(); setupCalendar();
+  if (!$('#done').hidden) showDone();
+}
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+
+/* ---------- musiqa ---------- */
+const audio = new Audio();
+audio.loop = true; audio.preload = 'none';
+if (isSet(CONFIG.music)) audio.src = CONFIG.music;
+let muted = false;
+function updateSoundLabel() {
+  $('#sound').classList.toggle('muted', muted);
+  $('#sound').setAttribute('aria-label', muted ? t('soundOn') : t('soundOff'));
+}
+$('#sound').addEventListener('click', () => {
+  muted = !muted; audio.muted = muted;
+  if (!muted && audio.src && audio.paused) audio.play().catch(() => {});
+  updateSoundLabel();
+});
+
+/* ---------- ochilish ekrani ---------- */
+const COLORS = ['#c9a24b', '#e6c97a', '#f6efe0', '#3b5b94', '#b85a3e', '#ffffff'];
+const rnd = (a, b) => a + Math.random() * (b - a);
+function confetti() {
+  const fx = $('#fx'), h = innerHeight;
+  for (let i = 0; i < 90; i++) {
+    const c = document.createElement('i'); c.className = 'confetti';
+    c.style.background = COLORS[i % COLORS.length];
+    if (i % 3 === 0) { c.style.width = c.style.height = '9px'; c.style.borderRadius = '50%'; }
+    fx.append(c);
+    const dx = rnd(-200, 200), up = rnd(-380, -140);
+    c.animate([
+      { transform: 'translate(0,0) rotate(0)', opacity: 1 },
+      { transform: `translate(${dx * .6}px,${up}px) rotate(${rnd(-200, 200)}deg)`, opacity: 1, offset: .35 },
+      { transform: `translate(${dx}px,${h * .65}px) rotate(${rnd(-720, 720)}deg)`, opacity: 0 },
+    ], { duration: rnd(2200, 3400), easing: 'cubic-bezier(.2,.6,.4,1)', fill: 'forwards' }).onfinish = () => c.remove();
+  }
+}
+function balloons() {
+  const fx = $('#fx');
+  for (let i = 0; i < 8; i++) {
+    const w = document.createElement('div'); w.className = 'balloon-fly';
+    w.style.left = rnd(0, 85) + '%'; w.style.color = COLORS[i % 5];
+    w.innerHTML = '<svg viewBox="0 0 60 130"><use href="#s-balloon"/></svg>';
+    fx.append(w);
+    const sway = rnd(-40, 40);
+    w.animate([
+      { transform: 'translate(0,0) rotate(-4deg)' },
+      { transform: `translate(${sway}px,-60vh) rotate(5deg)` },
+      { transform: `translate(${-sway / 2}px,-125vh) rotate(-3deg)` },
+    ], { duration: rnd(5500, 8500), delay: rnd(0, 900), easing: 'ease-in', fill: 'forwards' }).onfinish = () => w.remove();
+  }
+}
+function openInvite() {
+  const splash = $('#splash');
+  if (splash.classList.contains('opening')) return;
+  if (audio.src) audio.play().catch(() => {});       // ovoz faqat bosishdan keyin
+  const finish = () => {
+    splash.hidden = true;
+    $('#main').inert = false;
+    document.body.classList.remove('locked');
+    document.body.classList.add('opened');
+    $('#hero-title').focus({ preventScroll: true });
+    startReveal();
+  };
+  if (reduced) { finish(); return; }
+  splash.classList.add('opening');
+  setTimeout(confetti, 250);
+  setTimeout(balloons, 500);
+  setTimeout(() => { splash.classList.add('hide'); document.body.classList.add('opened'); startReveal(); }, 1000);
+  setTimeout(finish, 1600);
+}
+$('#open-btn').addEventListener('click', openInvite);
+
+/* ---------- paydo bo'lish animatsiyasi ---------- */
+// Splash yopilgach kuzatish boshlanadi; dastur bandlari ham birin-ketin chiqadi.
+const seen = new Set();                   // til almashganda ko'ringan bandlar qayta yashirinmasin
+let io = null, revealStarted = false;
+if (!reduced && 'IntersectionObserver' in window) {
+  document.documentElement.classList.add('anim');
+  io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      if (e.target.dataset.i) seen.add(e.target.dataset.i);
+      io.unobserve(e.target);
+    });
+  }, { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+}
+function startReveal() {
+  revealStarted = true;
+  if (io) document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
+}
+
+/* ---------- teskari sanoq ---------- */
+const START = new Date(CONFIG.start).getTime();
+const pad = (n) => String(n).padStart(2, '0');
+function tick() {
+  const diff = START - Date.now();
+  if (diff <= 0) { $('#countdown-wrap').hidden = true; $('#arrived').hidden = false; return false; }
+  const s = Math.floor(diff / 1000);
+  $('#cd-d').textContent = pad(Math.floor(s / 86400));
+  $('#cd-h').textContent = pad(Math.floor(s % 86400 / 3600));
+  $('#cd-m').textContent = pad(Math.floor(s % 3600 / 60));
+  $('#cd-s').textContent = pad(s % 60);
+  return true;
+}
+if (tick()) { const timer = setInterval(() => { if (!tick()) clearInterval(timer); }, 1000); }
+
+/* ---------- taqvim ---------- */
+const utc = (iso) => new Date(iso).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+function setupCalendar() {
+  const q = new URLSearchParams({
+    action: 'TEMPLATE', text: t('calTitle'), dates: utc(CONFIG.start) + '/' + utc(CONFIG.end),
+    details: t('calDesc'), location: t('address'), ctz: 'Asia/Tashkent',
+  });
+  $('#gcal-btn').href = 'https://calendar.google.com/calendar/render?' + q;
+}
+$('#ics-btn').addEventListener('click', () => {
+  const esc = (s) => s.replace(/\\/g, '\\\\').replace(/([,;])/g, '\\$1');
+  const ics = [
+    'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Taklifnoma//UZ', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+    'BEGIN:VEVENT', 'UID:muhammadjon-xatna-20261025@taklifnoma', 'DTSTAMP:' + utc(new Date().toISOString()),
+    'DTSTART:' + utc(CONFIG.start), 'DTEND:' + utc(CONFIG.end),
+    'SUMMARY:' + esc(t('calTitle')), 'LOCATION:' + esc(t('address')), 'DESCRIPTION:' + esc(t('calDesc')),
+    'BEGIN:VALARM', 'TRIGGER:-PT3H', 'ACTION:DISPLAY', 'DESCRIPTION:' + esc(t('calTitle')), 'END:VALARM',
+    'END:VEVENT', 'END:VCALENDAR',
+  ].join('\r\n');
+  const url = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
+  const a = Object.assign(document.createElement('a'), { href: url, download: 'muhammadjon-toy.ics' });
+  document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+});
+
+/* ---------- xarita va nusxalash ---------- */
+$('#gmaps').href = isSet(CONFIG.googleMaps) ? CONFIG.googleMaps
+  : 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(CONFIG.mapQuery);
+$('#ymaps').href = isSet(CONFIG.yandexMaps) ? CONFIG.yandexMaps
+  : 'https://yandex.uz/maps/?text=' + encodeURIComponent(CONFIG.mapQuery);
+async function copyText(text) {
+  try { await navigator.clipboard.writeText(text); return true; }
+  catch {
+    const ta = Object.assign(document.createElement('textarea'), { value: text });
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.append(ta); ta.select();
+    let ok = false; try { ok = document.execCommand('copy'); } catch {}
+    ta.remove(); return ok;
+  }
+}
+$('#copy-btn').addEventListener('click', async () => {
+  const ok = await copyText(t('address'));
+  $('#copy-status').textContent = ok ? t('copied') : t('copyFail');
+  setTimeout(() => $('#copy-status').textContent = '', 3000);
+});
+
+/* ---------- rasmlar ---------- */
+function addPhoto(box, src, alt, lazy) {
+  if (!isSet(src)) return;
+  const img = new Image();
+  img.alt = alt; img.decoding = 'async'; if (lazy) img.loading = 'lazy';
+  img.onload = () => { box.textContent = ''; box.append(img); };   // yuklanmasa placeholder qoladi
+  img.src = src;
+}
+addPhoto($('#portrait'), CONFIG.photo, 'Муҳаммаджон', false);
+addPhoto($('#venue-photo'), CONFIG.venuePhoto, '«Лола» тўйхонаси', true);
+
+/* ---------- javob xati ---------- */
+let guests = 1, last = null;
+const form = $('#rsvp-form');
+function setGuests(n) {
+  guests = Math.min(10, Math.max(1, n));
+  $('#guests').textContent = guests;
+  $('#minus').disabled = guests <= 1; $('#plus').disabled = guests >= 10;
+}
+$('#minus').addEventListener('click', () => setGuests(guests - 1));
+$('#plus').addEventListener('click', () => setGuests(guests + 1));
+setGuests(1);
+form.addEventListener('change', (e) => {
+  if (e.target.name === 'attending') {
+    $('#guests-field').hidden = e.target.value === 'no';
+    $('#e-att').hidden = true;
+  }
+});
+$('#f-name').addEventListener('input', () => $('#e-name').hidden = true);
+
+function tgLink(d) {
+  const lines = [t('msg'), `${t('mName')}: ${d.name}`, `${t('mAns')}: ${d.yes ? t('yes') : t('no')}`];
+  if (d.yes) lines.push(`${t('mCount')}: ${d.guests}`);
+  if (d.wish) lines.push(`${t('mWish')}: ${d.wish}`);
+  return `https://t.me/${CONFIG.telegram}?text=${encodeURIComponent(lines.join('\n'))}`;
+}
+function showDone() {
+  $('#done-text').textContent = last.yes ? t('doneYes') : t('doneNo');
+  $('#tg-btn').href = tgLink(last);
+  form.hidden = true; $('#done').hidden = false;
+}
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = $('#f-name').value.replace(/\s+/g, ' ').trim();
+  const att = form.querySelector('input[name="attending"]:checked');
+  $('#e-name').hidden = !!name; $('#e-att').hidden = !!att;
+  if (!name) { $('#f-name').focus(); return; }
+  if (!att) { form.querySelector('input[name="attending"]').focus(); return; }
+  if (!isSet(CONFIG.telegram)) {           // xato jimgina yutilmaydi
+    $('#e-send').textContent = t('tgMissing'); $('#e-send').hidden = false; return;
+  }
+  $('#e-send').hidden = true;
+  last = { name, yes: att.value === 'yes', guests: att.value === 'yes' ? guests : 0, wish: $('#f-wish').value.trim() };
+  store.set('taklifnoma.rsvp', JSON.stringify(last));
+  showDone();
+  window.open($('#tg-btn').href, '_blank', 'noopener');
+  $('#done').focus();
+});
+$('#edit-btn').addEventListener('click', () => { $('#done').hidden = true; form.hidden = false; $('#f-name').focus(); });
+try {                                       // oldin javob bergan bo'lsa — eslab qolamiz
+  const saved = JSON.parse(store.get('taklifnoma.rsvp'));
+  if (saved && saved.name) {
+    last = saved;
+    $('#f-name').value = saved.name;
+    form.querySelector(`input[value="${saved.yes ? 'yes' : 'no'}"]`).checked = true;
+    $('#guests-field').hidden = !saved.yes;
+    setGuests(saved.guests || 1);
+    $('#f-wish').value = saved.wish || '';
+  }
+} catch {}
+
+/* ---------- shaxsiy havola yasagich (index.html#havola) ---------- */
+if (location.hash === '#havola') {
+  $('#maker').hidden = false;
+  const build = () => {
+    const n = $('#maker-name').value.replace(/\s+/g, ' ').trim().slice(0, 40);
+    const base = location.href.split(/[?#]/)[0];
+    return n ? `${base}?mehmon=${encodeURIComponent(n)}` : '';
+  };
+  $('#maker-name').addEventListener('input', () => $('#maker-out').textContent = build());
+  $('#maker-copy').addEventListener('click', async () => {
+    const link = build(); if (!link) return;
+    $('#maker-copy').textContent = (await copyText(link)) ? 'Nusxalandi ✓' : 'Nusxalab bo‘lmadi';
+    setTimeout(() => $('#maker-copy').textContent = 'Havolani nusxalash', 2000);
+  });
+}
+
+/* ---------- boshlash ---------- */
+$('#credit').textContent = 'Taklifnoma' + (isSet(CONFIG.siteName) ? ' ' + CONFIG.siteName : '');
+applyLang(lang);
+</script>
+</body>
+</html>
