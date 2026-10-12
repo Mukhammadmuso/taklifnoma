@@ -180,34 +180,15 @@ body.opened .sound{display:flex}
 .address{font-family:var(--serif);font-size:26px;font-weight:600;line-height:1.3;margin:0 0 18px;color:#fff}
 .copy-status{min-height:24px;font-size:14px;color:var(--gold-light);margin:8px 0 0}
 
-/* ==================== G) RSVP ==================== */
-.form{text-align:left}
-.field{margin:0 0 20px;border:0;padding:0}
-.field > label,.field legend{display:block;font-weight:600;font-size:15px;margin:0 0 8px;color:var(--navy);padding:0}
-.opt{font-weight:400;color:#6b6f78}
 .input{width:100%;min-height:52px;padding:12px 16px;border:1.5px solid #d6c59d;border-radius:14px;background:#fff;font-size:16px}
-textarea.input{min-height:96px;resize:vertical}
-.input:focus{border-color:var(--navy);outline:none;box-shadow:0 0 0 3px rgba(201,162,75,.45)}
-.choices{display:grid;gap:10px}
-.choice{display:flex;align-items:center;gap:12px;min-height:54px;padding:10px 16px;border:1.5px solid #d6c59d;border-radius:14px;background:#fff;cursor:pointer;font-size:16px}
-.choice input{width:22px;height:22px;accent-color:var(--navy);margin:0;flex:none}
-.choice:has(input:checked){border-color:var(--navy);background:#fbf3df}
-.stepper{display:flex;align-items:center;gap:10px}
-.stepper button{width:52px;height:52px;border-radius:14px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);font-size:24px;line-height:1;cursor:pointer}
-.stepper button:disabled{opacity:.35;cursor:default}
-.stepper output{min-width:56px;text-align:center;font-family:var(--sans);font-size:26px;font-weight:700;color:var(--navy)}
-.err{color:#a3271a;font-size:14px;margin:6px 0 0}
-.done{text-align:center}
-.done .check{width:64px;height:64px;margin:0 auto 14px;color:var(--gold-ink)}
-.done p{font-size:17px;margin:0 0 18px}
-.hint{font-size:14px!important;color:#5a5f6b}
-.link-btn{background:none;border:0;color:var(--navy);text-decoration:underline;min-height:44px;cursor:pointer;font-size:15px;margin-top:6px}
 
 /* ==================== H) YAKUN ==================== */
 .finale{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 .finale .big{font-family:var(--serif);font-size:48px;font-weight:600;color:var(--gold-light);margin:0 0 6px;line-height:1.1}
 .finale .sign span{color:rgba(248,243,230,.75)}
 .finale .sign strong{color:var(--gold-light)}
+.contact{margin-top:36px}
+.contact p{margin:0 0 12px;font-size:15px;color:rgba(248,243,230,.8)}
 .credit{margin:40px 0 0;font-size:12px;letter-spacing:.08em;color:rgba(248,243,230,.45)}
 .maker{margin-top:28px;text-align:left;background:rgba(255,255,255,.06);border:1px dashed var(--gold);border-radius:16px;padding:18px}
 .maker label{display:block;font-weight:600;margin:0 0 8px}
@@ -412,54 +393,6 @@ textarea.input{min-height:96px;resize:vertical}
     <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
   </section>
 
-  <!-- ==================== G) JAVOB XATI ==================== -->
-  <section class="section cream" id="rsvp" aria-labelledby="rsvp-title">
-    <h2 class="title reveal" id="rsvp-title" data-t="rsvpTitle">Жавоб хати</h2>
-    <svg class="divider reveal" aria-hidden="true"><use href="#s-divider"/></svg>
-    <p class="lead reveal" data-t="rsvpLead">Илтимос, тўйга келиш-келмаслигингизни олдиндан билдиринг.</p>
-    <div class="card reveal">
-      <form class="form" id="rsvp-form" novalidate>
-        <div class="field">
-          <label for="f-name"><span data-t="fName">Исмингиз</span> *</label>
-          <input class="input" id="f-name" name="name" maxlength="60" autocomplete="name" required aria-describedby="e-name" data-t-ph="fNamePh" placeholder="Масалан: Азиз ака">
-          <p class="err" id="e-name" hidden data-t="eName">Илтимос, исмингизни ёзинг</p>
-        </div>
-        <fieldset class="field" aria-describedby="e-att">
-          <legend><span data-t="fAttend">Келасизми?</span> *</legend>
-          <div class="choices">
-            <label class="choice"><input type="radio" name="attending" value="yes"><span data-t="yes">Албатта келаман</span></label>
-            <label class="choice"><input type="radio" name="attending" value="no"><span data-t="no">Афсуски, кела олмайман</span></label>
-          </div>
-          <p class="err" id="e-att" hidden data-t="eAttend">Илтимос, бир вариантни танланг</p>
-        </fieldset>
-        <div class="field" id="guests-field">
-          <label id="guests-label" data-t="fGuests">Неча киши?</label>
-          <div class="stepper" role="group" aria-labelledby="guests-label">
-            <button type="button" id="minus" data-t-aria="less" aria-label="Камайтириш">−</button>
-            <output id="guests" aria-live="polite">1</output>
-            <button type="button" id="plus" data-t-aria="more" aria-label="Кўпайтириш">+</button>
-          </div>
-        </div>
-        <div class="field">
-          <label for="f-wish"><span data-t="fWish">Тилаклар</span> <span class="opt" data-t="optional">(ихтиёрий)</span></label>
-          <textarea class="input" id="f-wish" name="wish" maxlength="500" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-gold btn-block" style="min-height:56px;font-size:16px" data-t="send">Жавобни юбориш</button>
-        <p class="err" id="e-send" role="alert" hidden></p>
-      </form>
-
-      <div class="done" id="done" hidden tabindex="-1">
-        <svg class="check" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="28"/><path d="M20 33l8 8 16-17"/></svg>
-        <p id="done-text"></p>
-        <a class="btn btn-tg btn-block" id="tg-btn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.5 4.3L2.9 11.5c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.8.8s.6-.2.9-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.2-15.1c.3-1.3-.5-1.9-1.6-1.5zM9.3 14.6l9.2-5.8c.4-.3.8-.1.5.2l-7.6 6.9-.3 3.3-1.8-4.6z"/></svg>
-          <span data-t="tgSend">Telegram орқали жавоб бериш</span></a>
-        <p class="hint" data-t="tgHint">Жавобингиз бизга етиб бориши учун Telegram'да «Юбориш» тугмасини босинг.</p>
-        <button type="button" class="link-btn" id="edit-btn" data-t="edit">Жавобни ўзгартириш</button>
-      </div>
-    </div>
-  </section>
-
   <!-- ==================== H) YAKUN ==================== -->
   <footer class="section navy finale">
     <div class="reveal" aria-hidden="true" style="width:120px;margin:0 auto 10px"><svg viewBox="0 0 120 130">
@@ -469,6 +402,13 @@ textarea.input{min-height:96px;resize:vertical}
     <p class="big reveal" data-t="waiting">Сизни кутамиз!</p>
     <svg class="divider reveal" aria-hidden="true"><use href="#s-divider"/></svg>
     <div class="sign reveal"><span data-t="regards">Самимий ҳурмат билан,</span><strong data-t="host">Шохсанам</strong></div>
+
+    <div class="contact reveal">
+      <p data-t="contactLead">Саволлар бўлса, бизга ёзинг</p>
+      <a class="btn btn-tg" id="tg-btn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.5 4.3L2.9 11.5c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.8.8s.6-.2.9-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.2-15.1c.3-1.3-.5-1.9-1.6-1.5zM9.3 14.6l9.2-5.8c.4-.3.8-.1.5.2l-7.6 6.9-.3 3.3-1.8-4.6z"/></svg>
+        <span data-t="tgContact">Telegram орқали боғланиш</span></a>
+    </div>
 
     <!-- Shaxsiy havola yasash: saytni ...index.html#havola deb oching -->
     <div class="maker" id="maker" hidden>
@@ -491,12 +431,13 @@ textarea.input{min-height:96px;resize:vertical}
 const CONFIG = {
   start: '2026-10-25T13:00:00+05:00',   // to'y boshlanishi (Toshkent vaqti)
   end:   '2026-10-25T17:00:00+05:00',   // taqvim uchun tugash vaqti
-  telegram:   'TELEGRAM_USERNAME',      // @ belgisisiz, masalan: shohsanam_uz
-  googleMaps: 'GOOGLE_MAPS_URL',        // https://maps.app.goo.gl/...
-  yandexMaps: 'YANDEX_MAPS_URL',        // https://yandex.uz/maps/-/...
+  telegram:   'ipar_healthy',           // @ belgisisiz
+  // «Лола» тўйхонаси: Plus Code 9FP6+MRG (Олтиариқ) = 40.386687, 71.462078
+  googleMaps: 'https://www.google.com/maps/search/?api=1&query=40.386687%2C71.462078',
+  yandexMaps: 'https://yandex.uz/maps/?pt=71.462078,40.386687&z=17&l=map',
   photo:      'MUHAMMADJON_PHOTO',      // masalan: muhammadjon.webp (index.html yonida)
   venuePhoto: 'VENUE_PHOTO',            // masalan: toyxona.webp
-  music:      'MUSIC_FILE',             // masalan: music.mp3
+  music:      'MUSIC_FILE',             // masalan: music.mp3 — bo'lmasa sayt o'zi kuy chaladi
   siteName:   'SAYT_NOMI',              // pastdagi mayda imzo
   mapQuery:   'Лола тўйхонаси, Олтиариқ', // xarita havolasi bo'lmasa shu bo'yicha qidiradi
 };
@@ -526,17 +467,7 @@ const T = {
     ],
     venueTitle:'Манзил', address:'Олтиариқ тумани, «Лола» тўйхонаси', yandex:'Яндекс Хариталар',
     copy:'Манзилни нусхалаш', copied:'Манзил нусхаланди', copyFail:'Нусхалаб бўлмади',
-    rsvpTitle:'Жавоб хати', rsvpLead:'Илтимос, тўйга келиш-келмаслигингизни олдиндан билдиринг.',
-    fName:'Исмингиз', fNamePh:'Масалан: Азиз ака', eName:'Илтимос, исмингизни ёзинг',
-    fAttend:'Келасизми?', yes:'Албатта келаман', no:'Афсуски, кела олмайман', eAttend:'Илтимос, бир вариантни танланг',
-    fGuests:'Неча киши?', less:'Камайтириш', more:'Кўпайтириш',
-    fWish:'Тилаклар', optional:'(ихтиёрий)', send:'Жавобни юбориш',
-    doneYes:'Раҳмат! Жавобингиз қабул қилинди. Сизни тўйимизда интизорлик билан кутамиз.',
-    doneNo:'Раҳмат! Жавобингиз қабул қилинди. Эзгу тилакларингиз учун ташаккур.',
-    tgSend:'Telegram орқали жавоб бериш', tgHint:'Жавобингиз бизга етиб бориши учун Telegram\'да «Юбориш» тугмасини босинг.',
-    tgMissing:'Telegram манзили ҳали киритилмаган. Қайта уриниб кўринг ёки бизга қўнғироқ қилинг.',
-    edit:'Жавобни ўзгартириш',
-    msg:'Ассалому алайкум! Муҳаммаджоннинг хатна тўйига жавоб:', mName:'Исм', mAns:'Жавоб', mCount:'Киши сони', mWish:'Тилак',
+    contactLead:'Саволлар бўлса, бизга ёзинг', tgContact:'Telegram орқали боғланиш',
     waiting:'Сизни кутамиз!', soundOff:'Овозни ўчириш', soundOn:'Овозни ёқиш',
     calTitle:'Муҳаммаджоннинг хатна тўйи', calDesc:'Самимий ҳурмат билан, Шохсанам',
   },
@@ -561,17 +492,7 @@ const T = {
     ],
     venueTitle:'Manzil', address:'Oltiariq tumani, «Lola» to‘yxonasi', yandex:'Yandex Xaritalar',
     copy:'Manzilni nusxalash', copied:'Manzil nusxalandi', copyFail:'Nusxalab bo‘lmadi',
-    rsvpTitle:'Javob xati', rsvpLead:'Iltimos, to‘yga kelish-kelmasligingizni oldindan bildiring.',
-    fName:'Ismingiz', fNamePh:'Masalan: Aziz aka', eName:'Iltimos, ismingizni yozing',
-    fAttend:'Kelasizmi?', yes:'Albatta kelaman', no:'Afsuski, kela olmayman', eAttend:'Iltimos, bitta variantni tanlang',
-    fGuests:'Necha kishi?', less:'Kamaytirish', more:'Ko‘paytirish',
-    fWish:'Tilaklar', optional:'(ixtiyoriy)', send:'Javobni yuborish',
-    doneYes:'Rahmat! Javobingiz qabul qilindi. Sizni to‘yimizda intizorlik bilan kutamiz.',
-    doneNo:'Rahmat! Javobingiz qabul qilindi. Ezgu tilaklaringiz uchun tashakkur.',
-    tgSend:'Telegram orqali javob berish', tgHint:'Javobingiz bizga yetib borishi uchun Telegram’da «Yuborish» tugmasini bosing.',
-    tgMissing:'Telegram manzili hali kiritilmagan. Qayta urinib ko‘ring yoki bizga qo‘ng‘iroq qiling.',
-    edit:'Javobni o‘zgartirish',
-    msg:'Assalomu alaykum! Muhammadjonning xatna to‘yiga javob:', mName:'Ism', mAns:'Javob', mCount:'Kishi soni', mWish:'Tilak',
+    contactLead:'Savollar bo‘lsa, bizga yozing', tgContact:'Telegram orqali bog‘lanish',
     waiting:'Sizni kutamiz!', soundOff:'Ovozni o‘chirish', soundOn:'Ovozni yoqish',
     calTitle:'Muhammadjonning xatna to‘yi', calDesc:'Samimiy hurmat bilan, Shohsanam',
   },
@@ -593,7 +514,6 @@ const guestName = (() => {
   const raw = new URLSearchParams(location.search).get('mehmon') || '';
   return raw.replace(/[\u0000-\u001f\u007f<>]/g, '').replace(/\s+/g, ' ').trim().slice(0, 40);
 })();
-if (guestName) $('#f-name').value = guestName;
 
 /* ---------- til ---------- */
 function renderGreeting() {
@@ -626,23 +546,129 @@ function applyLang(l) {
   document.querySelectorAll('[data-t-ph]').forEach(el => el.placeholder = t(el.dataset.tPh));
   document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === l)));
   renderGreeting(); renderProgram(); updateSoundLabel(); setupCalendar();
-  if (!$('#done').hidden) showDone();
 }
 document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
 
-/* ---------- musiqa ---------- */
+/* ---------- musiqa ----------
+   CONFIG.music da fayl bo'lsa — o'sha chalinadi.
+   Bo'lmasa — sayt o'zi milliy ruhdagi kuy chaladi (dutor + doira, Web Audio). */
 const audio = new Audio();
 audio.loop = true; audio.preload = 'none';
 if (isSet(CONFIG.music)) audio.src = CONFIG.music;
-let muted = false;
+
+const tune = (() => {
+  const AC = window.AudioContext || window.webkitAudioContext;
+  let ctx, master, out, timer, step = 0, nextTime = 0;
+  const BEAT = 0.21;                        // bitta sakkizlik nota (soniya), 6/8 o'lchov
+  const ROOT = 293.66;                      // D4; Hijoz parda: D Eb F# G A Bb C D
+  // [yarim ton, davomiylik (sakkizlik)] — har bir qator bitta takt (6 ta sakkizlik)
+  const MELODY = [
+    [7,1],[7,1],[8,1],[7,1],[5,1],[4,1],
+    [5,2],[4,1],[1,1],[0,2],
+    [0,1],[4,1],[5,1],[7,2],[8,1],
+    [7,2],[5,1],[4,1],[5,2],
+    [12,1],[10,1],[8,1],[7,2],[8,1],
+    [10,2],[8,1],[7,1],[5,1],[4,1],
+    [5,1],[7,1],[8,1],[7,1],[5,1],[4,1],
+    [1,1],[4,1],[1,1],[0,3],
+  ];
+  const BARS = 8, events = [];
+  { let pos = 0; for (const [n, d] of MELODY) { events[pos] = [n, d]; pos += d; } }
+  const DOIRA = ['dum', null, 'tak', 'dum', 'tak', 'ghost'];
+  const BASS = [0, 0, 5, 7, 8, 5, 7, 0];   // har takt uchun dutor bas notasi
+
+  let noise;
+  function init() {
+    ctx = new AC();
+    master = ctx.createGain(); master.gain.value = 0;
+    const comp = ctx.createDynamicsCompressor();
+    master.connect(comp); comp.connect(ctx.destination);
+    // yengil aks-sado
+    out = ctx.createGain();
+    const delay = ctx.createDelay(); delay.delayTime.value = BEAT * 1.5;
+    const fb = ctx.createGain(); fb.gain.value = .28;
+    const wet = ctx.createGain(); wet.gain.value = .22;
+    out.connect(master); out.connect(delay); delay.connect(fb); fb.connect(delay); delay.connect(wet); wet.connect(master);
+    noise = ctx.createBuffer(1, ctx.sampleRate * .2, ctx.sampleRate);
+    const d = noise.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+  }
+  function pluck(freq, time, len, vol) {     // dutor/rubob tovushi
+    const f = ctx.createBiquadFilter(); f.type = 'lowpass'; f.Q.value = 2;
+    f.frequency.setValueAtTime(freq * 9, time); f.frequency.exponentialRampToValueAtTime(freq * 1.6, time + .25);
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0, time); g.gain.linearRampToValueAtTime(vol, time + .006);
+    g.gain.exponentialRampToValueAtTime(.0008, time + len);
+    for (const [type, det, v] of [['sawtooth', 0, .55], ['triangle', 6, .8]]) {
+      const o = ctx.createOscillator(); o.type = type; o.frequency.value = freq; o.detune.value = det;
+      const og = ctx.createGain(); og.gain.value = v;
+      o.connect(og); og.connect(f); o.start(time); o.stop(time + len + .05);
+    }
+    f.connect(g); g.connect(out);
+  }
+  function drum(kind, time) {                // doira: dum / tak
+    const g = ctx.createGain(); g.connect(out);
+    if (kind === 'dum') {
+      const o = ctx.createOscillator(); o.type = 'sine';
+      o.frequency.setValueAtTime(140, time); o.frequency.exponentialRampToValueAtTime(58, time + .18);
+      g.gain.setValueAtTime(.9, time); g.gain.exponentialRampToValueAtTime(.001, time + .35);
+      o.connect(g); o.start(time); o.stop(time + .4);
+    } else {
+      const s = ctx.createBufferSource(); s.buffer = noise;
+      const bp = ctx.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 2600; bp.Q.value = 1.2;
+      g.gain.setValueAtTime(kind === 'tak' ? .5 : .16, time); g.gain.exponentialRampToValueAtTime(.001, time + .09);
+      s.connect(bp); bp.connect(g); s.start(time); s.stop(time + .12);
+    }
+  }
+  const hz = (semi, base = ROOT) => base * Math.pow(2, semi / 12);
+  function schedule() {
+    while (nextTime < ctx.currentTime + .15) {
+      const s = step % (BARS * 6), bar = Math.floor(s / 6), beat = s % 6;
+      const ev = events[s];
+      if (ev) pluck(hz(ev[0]), nextTime, Math.max(.35, ev[1] * BEAT * 1.6), .22);
+      if (beat === 0) { pluck(hz(BASS[bar], ROOT / 2), nextTime, 1.1, .16); pluck(hz(BASS[bar] + 7, ROOT / 2), nextTime + .01, 1, .08); }
+      if (beat === 3) pluck(hz(BASS[bar], ROOT / 2), nextTime, .7, .1);
+      if (DOIRA[beat]) drum(DOIRA[beat], nextTime);
+      nextTime += BEAT; step++;
+    }
+  }
+  return {
+    ok: !!AC,
+    start() {                                // faqat bosishdan keyin chaqiriladi
+      if (!AC) return;
+      if (!ctx) init();
+      ctx.resume();
+      master.gain.cancelScheduledValues(ctx.currentTime);
+      master.gain.setTargetAtTime(.32, ctx.currentTime, .4);
+      if (!timer) { nextTime = ctx.currentTime + .1; timer = setInterval(schedule, 40); }
+    },
+    stop() {
+      if (!ctx) return;
+      master.gain.setTargetAtTime(0, ctx.currentTime, .1);
+      clearInterval(timer); timer = null;
+    },
+  };
+})();
+
+let muted = false, musicOn = false;
+function playMusic() {
+  musicOn = true;
+  if (audio.src) audio.play().catch(() => tune.start());   // fayl ochilmasa — o'z kuyimiz
+  else tune.start();
+}
+function pauseMusic() { audio.pause(); tune.stop(); }
 function updateSoundLabel() {
   $('#sound').classList.toggle('muted', muted);
   $('#sound').setAttribute('aria-label', muted ? t('soundOn') : t('soundOff'));
 }
 $('#sound').addEventListener('click', () => {
-  muted = !muted; audio.muted = muted;
-  if (!muted && audio.src && audio.paused) audio.play().catch(() => {});
+  muted = !muted;
+  if (muted) pauseMusic(); else playMusic();
   updateSoundLabel();
+});
+// boshqa ilovaga o'tilganda telefonda ovoz o'chsin, qaytganda davom etsin
+document.addEventListener('visibilitychange', () => {
+  if (!musicOn || muted) return;
+  if (document.hidden) pauseMusic(); else playMusic();
 });
 
 /* ---------- ochilish ekrani ---------- */
@@ -681,7 +707,7 @@ function balloons() {
 function openInvite() {
   const splash = $('#splash');
   if (splash.classList.contains('opening')) return;
-  if (audio.src) audio.play().catch(() => {});       // ovoz faqat bosishdan keyin
+  playMusic();                                       // ovoz faqat bosishdan keyin
   const finish = () => {
     splash.hidden = true;
     $('#main').inert = false;
@@ -764,6 +790,9 @@ $('#gmaps').href = isSet(CONFIG.googleMaps) ? CONFIG.googleMaps
   : 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(CONFIG.mapQuery);
 $('#ymaps').href = isSet(CONFIG.yandexMaps) ? CONFIG.yandexMaps
   : 'https://yandex.uz/maps/?text=' + encodeURIComponent(CONFIG.mapQuery);
+if (isSet(CONFIG.telegram)) $('#tg-btn').href = 'https://t.me/' + CONFIG.telegram;
+else $('.contact').hidden = true;
+
 async function copyText(text) {
   try { await navigator.clipboard.writeText(text); return true; }
   catch {
@@ -790,66 +819,6 @@ function addPhoto(box, src, alt, lazy) {
 }
 addPhoto($('#portrait'), CONFIG.photo, 'Муҳаммаджон', false);
 addPhoto($('#venue-photo'), CONFIG.venuePhoto, '«Лола» тўйхонаси', true);
-
-/* ---------- javob xati ---------- */
-let guests = 1, last = null;
-const form = $('#rsvp-form');
-function setGuests(n) {
-  guests = Math.min(10, Math.max(1, n));
-  $('#guests').textContent = guests;
-  $('#minus').disabled = guests <= 1; $('#plus').disabled = guests >= 10;
-}
-$('#minus').addEventListener('click', () => setGuests(guests - 1));
-$('#plus').addEventListener('click', () => setGuests(guests + 1));
-setGuests(1);
-form.addEventListener('change', (e) => {
-  if (e.target.name === 'attending') {
-    $('#guests-field').hidden = e.target.value === 'no';
-    $('#e-att').hidden = true;
-  }
-});
-$('#f-name').addEventListener('input', () => $('#e-name').hidden = true);
-
-function tgLink(d) {
-  const lines = [t('msg'), `${t('mName')}: ${d.name}`, `${t('mAns')}: ${d.yes ? t('yes') : t('no')}`];
-  if (d.yes) lines.push(`${t('mCount')}: ${d.guests}`);
-  if (d.wish) lines.push(`${t('mWish')}: ${d.wish}`);
-  return `https://t.me/${CONFIG.telegram}?text=${encodeURIComponent(lines.join('\n'))}`;
-}
-function showDone() {
-  $('#done-text').textContent = last.yes ? t('doneYes') : t('doneNo');
-  $('#tg-btn').href = tgLink(last);
-  form.hidden = true; $('#done').hidden = false;
-}
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = $('#f-name').value.replace(/\s+/g, ' ').trim();
-  const att = form.querySelector('input[name="attending"]:checked');
-  $('#e-name').hidden = !!name; $('#e-att').hidden = !!att;
-  if (!name) { $('#f-name').focus(); return; }
-  if (!att) { form.querySelector('input[name="attending"]').focus(); return; }
-  if (!isSet(CONFIG.telegram)) {           // xato jimgina yutilmaydi
-    $('#e-send').textContent = t('tgMissing'); $('#e-send').hidden = false; return;
-  }
-  $('#e-send').hidden = true;
-  last = { name, yes: att.value === 'yes', guests: att.value === 'yes' ? guests : 0, wish: $('#f-wish').value.trim() };
-  store.set('taklifnoma.rsvp', JSON.stringify(last));
-  showDone();
-  window.open($('#tg-btn').href, '_blank', 'noopener');
-  $('#done').focus();
-});
-$('#edit-btn').addEventListener('click', () => { $('#done').hidden = true; form.hidden = false; $('#f-name').focus(); });
-try {                                       // oldin javob bergan bo'lsa — eslab qolamiz
-  const saved = JSON.parse(store.get('taklifnoma.rsvp'));
-  if (saved && saved.name) {
-    last = saved;
-    $('#f-name').value = saved.name;
-    form.querySelector(`input[value="${saved.yes ? 'yes' : 'no'}"]`).checked = true;
-    $('#guests-field').hidden = !saved.yes;
-    setGuests(saved.guests || 1);
-    $('#f-wish').value = saved.wish || '';
-  }
-} catch {}
 
 /* ---------- shaxsiy havola yasagich (index.html#havola) ---------- */
 if (location.hash === '#havola') {
